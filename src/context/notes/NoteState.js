@@ -48,7 +48,12 @@ const NoteState = (props) => {
     };
 
     // Delete a Note
-    const deleteNote = () => {};
+    const deleteNote = (id) => {
+        const newNotes = notes.filter((notes) => {
+            return notes._id !== id;
+        });
+        setNotes(newNotes);
+    };
     // Edit a Note
     const editNote = () => {};
 
