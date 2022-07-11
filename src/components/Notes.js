@@ -130,6 +130,10 @@ const Notes = () => {
                                 Close
                             </button>
                             <button
+                                disabled={
+                                    note.etitle.length < 5 ||
+                                    note.edescription.length < 5
+                                }
                                 onClick={handleClick}
                                 type="button"
                                 className="btn btn-primary"
@@ -142,6 +146,9 @@ const Notes = () => {
             </div>
             <div className="row my-3">
                 <h1>Your notes</h1>
+                <div className="container">
+                    {notes.length === 0 && "No notes to display"}
+                </div>
                 {notes.map((note) => {
                     return (
                         <NoteItem
