@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const SignUp = (props) => {
     //     // Using useState to pass the data for login
@@ -41,6 +41,7 @@ const SignUp = (props) => {
 
     return (
         <div className="container my-5">
+            <h2>Create an account</h2>
             <form onSubmit={handleSubmit}>
                 <div className="mb-3">
                     <label htmlFor="exampleInputEmail1" className="form-label">
